@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabel Dosen</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/2.2.1/css/dataTables.bootstrap5.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+    <link href="fontawesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="fontawesome/css/brands.css" rel="stylesheet" />
+    <link href="fontawesome/css/solid.css" rel="stylesheet" />
+     <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        text-align: center;
+        padding: 8px;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body style="background-image: url(image/c.jpg); background-size: 100%">
+    <div class="row">
+     <div class="col-2" style="background-color: blue; color: white">
+        <h3 class="text-center my-4">
+          <i class="fa-solid fa-user-circle"></i> Dashboard
+        </h3>
+        <br />
+        <ul style="list-style: none; padding: 0; margin-left: 15px">
+          <li class="my-2">
+            <a href="home.html" style="color: white; text-decoration: none">
+              <i class="fa-solid fa-house"></i> Beranda
+            </a>
+          </li>
+          <li class="my-2">
+            <a
+              href="mahasiswa.html"
+              style="color: white; text-decoration: none"
+            >
+              <i class="fa-solid fa-user"></i> Mahasiswa
+            </a>
+          </li>
+          <li class="my-2">
+            <a href="dosen.html" style="color: white; text-decoration: none">
+              <i class="fa-solid fa-file-lines"></i> Dosen
+            </a>
+          </li>
+
+          <li class="my-2">
+            <div class="dropdown">
+              <a
+                href="#"
+                class="dropdown-toggle"
+                style="color: white; text-decoration: none"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fa-solid fa-gears"></i> KRS
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="isikrs.html"> Isi KRS </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="lihat.html"> Lihat KRS </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="my-2">
+            <a href="khs.html" style="color: white; text-decoration: none">
+              <i class="fa-solid fa-file-lines"></i> KHS
+            </a>
+          </li>
+          <li class="my-2">
+            <a
+              href="pembayaran.html"
+              style="color: white; text-decoration: none"
+            >
+              <i class="fa-solid fa-money-bill-wave"></i> Pembayaran
+            </a>
+          </li>
+          <li class="my-2">
+            <a href="jadwal.html" style="color: white; text-decoration: none">
+              <i class="fa-solid fa-calendar-days"></i> Jadwal Perkuliahan
+            </a>
+          </li>
+          <li class="my-2">
+            <a href="login.html" style="color: white; text-decoration: none">
+              <i class="fa-solid fa-right-from-bracket"></i> Keluar
+            </a>
+          </li>
+        </ul>
+      </div>
+
+
+<!-- Tambahkan link Font Awesome jika belum tersedia -->
+<script src="https://kit.fontawesome.com/YOUR-KIT-ID.js" crossorigin="anonymous"></script>
+
+      <div
+        class="col-10"
+        style="
+          background-color: white;
+          border: 1px solid rgb(81, 81, 136);
+          padding: 10px;
+          border-radius: 10px;  
+        "
+      >
+        <div class="container">
+        
+         <h1 align="center">Kartu Hasil Studi</h1>
+          <div class="row">
+            <div class="col-2"><strong>Nama</strong></div>
+            <div class="col-5">: Ahmad Khaeril Muzakki</div>
+          </div>
+          <div class="row">
+            <div class="col-2"><strong>NIM </strong></div>
+            <div class="col-5">: 23TI023</div>
+          </div>
+          <div class="row">
+            <div class="col-2"><strong>Jurusan </strong></div>
+            <div class="col-5">: S1-Teknik Informatika</div>
+          </div>
+          <div class="row">
+            <div class="col-2"><strong>Semester </strong></div>
+            <div class="col-5">: 1 (Dua)</div>
+          </div>
+          <div class="row">
+            <div class="col-2"><strong>Kelas </strong></div>
+            <div class="col-5">: 23 TII A</div>
+          </div>
+          <div class="row">
+            <div class="col-2"><strong>Tahun Akademik </strong></div>
+            <div class="col-5">: 2023/2024</div>
+          </div>
+          <div class="row">
+            <div class="col-2"><strong>Dosen Wali </strong></div>
+            <div class="col-5">: Dr. Muhammad Multazam, S.Kom., M.Kom</div>
+          </div>
+          <br /><br />
+          <table>
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Kode</th>
+                <th>Mata Kuliah</th>
+                <th>NM</th>
+                <th>AM</th>
+                <th>AM x K</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>066201</td>
+                <td>Bahasa Inggris II</td>
+                <td>B</td>
+                <td>3</td>
+                <td>6</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>066202</td>
+                <td>Kewarganegaraan</td>
+                <td>A</td>
+                <td>3</td>
+                <td>12</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>066203</td>
+                <td>Entrepreneurship II</td>
+                <td>A</td>
+                <td>3</td>
+                <td>12</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>066204</td>
+                <td>Algoritma dan Pemrograman II</td>
+                <td>A</td>
+                <td>4</td>
+                <td>16</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>066205</td>
+                <td>Aljabar Linear</td>
+                <td>A</td>
+                <td>3</td>
+                <td>12</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>066206</td>
+                <td>Sistem Basis Data</td>
+                <td>A</td>
+                <td>3</td>
+                <td>12</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>066207</td>
+                <td>Sistem Digital</td>
+                <td>A</td>
+                <td>2</td>
+                <td>8</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>066208</td>
+                <td>Teknologi Internet dan Web</td>
+                <td>A</td>
+                <td>2</td>
+                <td>8</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th colspan="5">Total SKS</th>
+                <th>80</th>
+              </tr>
+            </tfoot>
+          </table>
+
+          <p><strong>Indeks Prestasi Semester (IPS):</strong> 3.81</p>
+          <p><em>Keterangan:</em></p>
+          <ul>
+            <li>NM = Nilai Mutu</li>
+            <li>AM = Angka Mutu</li>
+            <li>IP = Indeks Prestasi</li>
+          </ul>
+          <br />
+          <br />
+          <div align="center">
+            <p>Rektor Universitas Teknologi Mataram</p>
+            <br /><br /><br />
+            <p><b>L. Darmawan Bakti M.sc M.kom</b></p>
+          </div>
+        </div>
+        </div>
+      </div>
+      <script src="js/bootstrap.bundle.js"></script>
+      <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+      <script src="https://cdn.datatables.net/2.2.1/js/dataTables.js"></script>
+      <script src=isikrs.html"https://cdn.datatables.net/2.2.1/js/dataTables.bootstrap5.js"></script>
+    </div>
+  </body>
+</html>

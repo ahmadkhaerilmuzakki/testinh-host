@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabel Dosen</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/2.2.1/css/dataTables.bootstrap5.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+    <link href="fontawesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="fontawesome/css/brands.css" rel="stylesheet" />
+    <link href="fontawesome/css/solid.css" rel="stylesheet" />
+  </head>
+  <body style="background-image: url(image/c.jpg); background-size: 100%">
+    <div class="row">
+      <div class="col-2" style="background-color: blue; color: white">
+        <h3 class="text-center my-4">
+          <i class="fa-solid fa-user-circle"></i> Dashboard
+        </h3>
+        <br />
+        <ul style="list-style: none; padding: 0; margin-left: 15px">
+          <li class="my-2">
+            <a href="home.html" style="color: white; text-decoration: none">
+              <i class="fa-solid fa-house"></i> Beranda
+            </a>
+          </li>
+          <li class="my-2">
+            <a
+              href="mahasiswa.html"
+              style="color: white; text-decoration: none"
+            >
+              <i class="fa-solid fa-user"></i> Mahasiswa
+            </a>
+          </li>
+          <li class="my-2">
+            <a href="dosen.html" style="color: white; text-decoration: none">
+              <i class="fa-solid fa-file-lines"></i> Dosen
+            </a>
+          </li>
+
+          <li class="my-2">
+            <div class="dropdown">
+              <a
+                href="#"
+                class="dropdown-toggle"
+                style="color: white; text-decoration: none"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fa-solid fa-gears"></i> KRS
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="isikrs.html"> Isi KRS </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="lihat.html"> Lihat KRS </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="my-2">
+            <a href="khs.html" style="color: white; text-decoration: none">
+              <i class="fa-solid fa-file-lines"></i> KHS
+            </a>
+          </li>
+          <li class="my-2">
+            <a
+              href="pembayaran.html"
+              style="color: white; text-decoration: none"
+            >
+              <i class="fa-solid fa-money-bill-wave"></i> Pembayaran
+            </a>
+          </li>
+          <li class="my-2">
+            <a href="jadwal.html" style="color: white; text-decoration: none">
+              <i class="fa-solid fa-calendar-days"></i> Jadwal Perkuliahan
+            </a>
+          </li>
+          <li class="my-2">
+            <a href="login.html" style="color: white; text-decoration: none">
+              <i class="fa-solid fa-right-from-bracket"></i> Keluar
+            </a>
+          </li>
+        </ul>
+      </div>
+      <script
+        src="https://kit.fontawesome.com/YOUR-KIT-ID.js"
+        crossorigin="anonymous"
+      ></script>
+      <div
+        class="col-10"
+        style="
+          background-color: white;
+          border: 1px solid rgb(81, 81, 136);
+          padding: 10px;
+          border-radius: 10px;
+        "
+      >
+        <div class="container">
+          <h5 align="center" style="background-color: rgba(0, 0, 255, 0.758)">
+            Data Dosen
+          </h5>
+          <br />
+          <table id="example" class="table table-striped" style="width: 100%">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Kode Matakuliah</th>
+                <th>Nama</th>
+                <th>Matakuliah Diampu</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>1234567890</td>
+                <td>Muhammad Multazam M. Kom</td>
+                <td>Interaksi Manusia Dengan Komputer</td>
+                <td>
+                  <button class="btn btn-sm" onclick="editData(this)">
+                    <i class="fa-solid fa-pencil"></i>
+                  </button>
+                  <button class="btn btn-sm" onclick="deleteRow(this)">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>1234567891</td>
+                <td>Aisyah Nurhaliza M. Kom</td>
+                <td>Pemrograman Web</td>
+                <td>
+                  <button class="btn btn-sm" onclick="editData(this)">
+                    <i class="fa-solid fa-pencil"></i>
+                  </button>
+                  <button class="btn btn-sm" onclick="deleteRow(this)">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>1234567892</td>
+                <td>Ahmad Fauzan M. Kom</td>
+                <td>Basis Data</td>
+                <td>
+                  <button class="btn btn-sm" onclick="editData(this)">
+                    <i class="fa-solid fa-pencil"></i>
+                  </button>
+                  <button class="btn btn-sm" onclick="deleteRow(this)">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>1234567893</td>
+                <td>Siti Aminah M. Kom</td>
+                <td>Kecerdasan Buatan</td>
+                <td>
+                  <button class="btn btn-sm" onclick="editData(this)">
+                    <i class="fa-solid fa-pencil"></i>
+                  </button>
+                  <button class="btn btn-sm" onclick="deleteRow(this)">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>1234567894</td>
+                <td>Rahmat Hidayat M. Kom</td>
+                <td>Algoritma dan Struktur Data</td>
+                <td>
+                  <button class="btn btn-sm" onclick="editData(this)">
+                    <i class="fa-solid fa-pencil"></i>
+                  </button>
+                  <button class="btn btn-sm" onclick="deleteRow(this)">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>1234567895</td>
+                <td>Dewi Lestari M. Kom</td>
+                <td>Sistem Operasi</td>
+                <td>
+                  <button class="btn btn-sm" onclick="editData(this)">
+                    <i class="fa-solid fa-pencil"></i>
+                  </button>
+                  <button class="btn btn-sm" onclick="deleteRow(this)">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>1234567896</td>
+                <td>Fadilah Rahmawati M. Kom</td>
+                <td>Jaringan Komputer</td>
+                <td>
+                  <button class="btn btn-sm" onclick="editData(this)">
+                    <i class="fa-solid fa-pencil"></i>
+                  </button>
+                  <button class="btn btn-sm" onclick="deleteRow(this)">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>1234567897</td>
+                <td>Hendra Setiawan M. Kom</td>
+                <td>Analisis Data</td>
+                <td>
+                  <button class="btn btn-sm" onclick="editData(this)">
+                    <i class="fa-solid fa-pencil"></i>
+                  </button>
+                  <button class="btn btn-sm" onclick="deleteRow(this)">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>1234567898</td>
+                <td>Nurul Fikri M. Kom</td>
+                <td>Keamanan Informasi</td>
+                <td>
+                  <button class="btn btn-sm" onclick="editData(this)">
+                    <i class="fa-solid fa-pencil"></i>
+                  </button>
+                  <button class="btn btn-sm" onclick="deleteRow(this)">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>1234567899</td>
+                <td>Arif Setyawan M. Kom</td>
+                <td>Pengolahan Citra Digital</td>
+                <td>
+                  <button class="btn btn-sm" onclick="editData(this)">
+                    <i class="fa-solid fa-pencil"></i>
+                  </button>
+                  <button class="btn btn-sm" onclick="deleteRow(this)">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <button class="btn btn-primary" id="addDataBtn" type="button">
+            Tambah Data
+          </button>
+        </div>
+      </div>
+      <script src="js/bootstrap.bundle.js"></script>
+      <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+      <script src="https://cdn.datatables.net/2.2.1/js/dataTables.js"></script>
+      <script src="https://cdn.datatables.net/2.2.1/js/dataTables.bootstrap5.js"></script>
+      <script>
+        const table = new DataTable("#example");
+
+        document.getElementById("addDataBtn").addEventListener("click", () => {
+          const newData = prompt(
+            "Masukkan data dalam format: No,Kode Matakuliah,Nama,MataKuliah Diampu"
+          );
+          if (newData) {
+            const dataArray = newData.split(",");
+            if (dataArray.length === 4) {
+              table.row
+                .add([
+                  dataArray[0],
+                  dataArray[1],
+                  dataArray[2],
+                  dataArray[3],
+                  '<button class="btn btn-sm" onclick="editData(this)"><i class="fa-solid fa-pencil"></i></button> <button class="btn btn-sm" onclick="deleteRow(this)"><i class="fa-solid fa-trash"></i></button>',
+                ])
+                .draw();
+            } else {
+              alert(
+                "Format data salah. Pastikan menggunakan 4 elemen yang dipisahkan koma."
+              );
+            }
+          }
+        });
+
+        function deleteRow(button) {
+          const row = button.closest("tr");
+          table.row(row).remove().draw();
+        }
+
+        function editData(button) {
+          const row = button.closest("tr");
+          const cells = table.row(row).data();
+          const dataString = cells.slice(0, 4).join(",");
+
+          const updatedData = prompt(
+            "Edit data dalam format: No,Kode Matakuliah,Nama,MataKuliah Diampu",
+            dataString
+          );
+
+          if (updatedData) {
+            const newDataArray = updatedData.split(",");
+            if (newDataArray.length === 4) {
+              table
+                .row(row)
+                .data([
+                  ...newDataArray,
+                  '<button class="btn btn-sm" onclick="editData(this)"><i class="fa-solid fa-pencil"></i></button> <button class="btn btn-sm" onclick="deleteRow(this)"><i class="fa-solid fa-trash"></i></button>',
+                ])
+                .draw();
+            } else {
+              alert(
+                "Format data salah. Harap masukkan 4 elemen yang dipisahkan koma."
+              );
+            }
+          }
+        }
+      </script>
+    </div>
+  </body>
+</html>

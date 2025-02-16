@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabel Dosen</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/2.2.1/css/dataTables.bootstrap5.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+    <link href="fontawesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="fontawesome/css/brands.css" rel="stylesheet" />
+    <link href="fontawesome/css/solid.css" rel="stylesheet" />
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        font-size: 16px;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+      }
+      th {
+        background-color: #f4f4f4;
+        font-weight: bold;
+      }
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+    </style>
+  </head>
+  <body style="background-image: url(image/c.jpg); background-size: 100%">
+    <div class="row">
+     <div class="row">
+        <div class="col-2" style="background-color: blue; color: white">
+        <h3 class="text-center my-4">
+          <i class="fa-solid fa-user-circle"></i> Dashboard
+        </h3>
+        <br />
+        <ul style="list-style: none; padding: 0; margin-left: 15px">
+          <li class="my-2">
+            <a href="home.html" style="color: white; text-decoration: none">
+              <i class="fa-solid fa-house"></i> Beranda
+            </a>
+          </li>
+          <li class="my-2">
+            <a
+              href="mahasiswa.html"
+              style="color: white; text-decoration: none"
+            >
+              <i class="fa-solid fa-user"></i> Mahasiswa
+            </a>
+          </li>
+          <li class="my-2">
+            <a href="dosen.html" style="color: white; text-decoration: none">
+              <i class="fa-solid fa-file-lines"></i> Dosen
+            </a>
+          </li>
+
+          <li class="my-2">
+            <div class="dropdown">
+              <a
+                href="#"
+                class="dropdown-toggle"
+                style="color: white; text-decoration: none"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fa-solid fa-gears"></i> KRS
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="isikrs.html"> Isi KRS </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="lihat.html"> Lihat KRS </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="my-2">
+            <a href="khs.html" style="color: white; text-decoration: none">
+              <i class="fa-solid fa-file-lines"></i> KHS
+            </a>
+          </li>
+          <li class="my-2">
+            <a
+              href="pembayaran.html"
+              style="color: white; text-decoration: none"
+            >
+              <i class="fa-solid fa-money-bill-wave"></i> Pembayaran
+            </a>
+          </li>
+          <li class="my-2">
+            <a href="jadwal.html" style="color: white; text-decoration: none">
+              <i class="fa-solid fa-calendar-days"></i> Jadwal Perkuliahan
+            </a>
+          </li>
+          <li class="my-2">
+            <a href="login.html" style="color: white; text-decoration: none">
+              <i class="fa-solid fa-right-from-bracket"></i> Keluar
+            </a>
+          </li>
+        </ul>
+      </div>
+
+
+ 
+      <div
+        class="col-10"
+        style="
+          background-color: white;
+          border: 1px solid rgb(81, 81, 136);
+          padding: 10px;
+          border-radius: 10px;  
+        "
+      >
+        
+        
+         <h3
+            align="center"
+            style="
+              background-color: rgba(0, 0, 255, 0.094);
+              border-radius: 7px;
+              padding: 10px;
+            "
+          >
+            Jadwal Perkuliahan
+          </h3>
+          <br />
+          <div class="container">
+            <table>
+              <thead>
+                <tr>
+                  <th>NO</th>
+                  <th>JAM</th>
+                  <th>HARI</th>
+                  <th>MATA KULIAH</th>
+                  <th>SKS</th>
+                  <th>RUANGAN</th>
+                  <th>DOSEN</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>07.30 - 09.15</td>
+                  <td>Senin</td>
+                  <td>Arsitektur Dan Organisasi kompter</td>
+                  <td>3</td>
+                  <td>Dahlia</td>
+                  <td>Ahmad Yani M. Kom</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>15.50 - 16.30</td>
+                  <td>Senin</td>
+                  <td>Pendidikan Agma Islam</td>
+                  <td>3</td>
+                  <td>Melati</td>
+                  <td>Hj. Eris Darsawati MM</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>13.00 - 15.40</td>
+                  <td>Senin</td>
+                  <td>Peng Ekonomi Mikro</td>
+                  <td>3</td>
+                  <td>D1</td>
+                  <td>Elan Eriswanto SE., MM</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>10.20 - 12.00</td>
+                  <td>Rabu</td>
+                  <td>Pengantar Bisnis</td>
+                  <td>2</td>
+                  <td>C10</td>
+                  <td>Idang Nurodin S.Ip., MM</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>13.00 - 15.30</td>
+                  <td>Rabu</td>
+                  <td>Peng Ekonomi Makro</td>
+                  <td>3</td>
+                  <td>D1</td>
+                  <td>Darmo H. Sumiryo M.Pd., MM</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>10.20 - 12.00</td>
+                  <td>Jumat</td>
+                  <td>Pendidikan Pancasila</td>
+                  <td>2</td>
+                  <td>C3</td>
+                  <td>Tina Rosalina SPd</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>13.00 - 14.40</td>
+                  <td>Jumat</td>
+                  <td>Al Islam 1</td>
+                  <td>2</td>
+                  <td>C3</td>
+                  <td>Drs. Badrudin A Latief</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>10.20 - 12.00</td>
+                  <td>Sabtu</td>
+                  <td>B. Inggris 1</td>
+                  <td>2</td>
+                  <td>C2</td>
+                  <td>Nadya Fahmalena S.S / Saprudin M.Hum</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        </div>
+      </div>
+      <script src="js/bootstrap.bundle.js"></script>
+      <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+      <script src="https://cdn.datatables.net/2.2.1/js/dataTables.js"></script>
+      <script src=isikrs.html"https://cdn.datatables.net/2.2.1/js/dataTables.bootstrap5.js"></script>
+    </div>
+  </body>
+</html>

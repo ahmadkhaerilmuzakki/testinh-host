@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabel Dosen</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/2.2.1/css/dataTables.bootstrap5.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+    <link href="fontawesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="fontawesome/css/brands.css" rel="stylesheet" />
+    <link href="fontawesome/css/solid.css" rel="stylesheet" />
+    <style>
+      .container {
+        max-width: 100%;
+        margin: 0 auto;
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 8px;
+      }
+      h1 {
+        text-align: center;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #ccc;
+      }
+      th,
+      td {
+        padding: 8px;
+        text-align: left;
+      }
+      .header-info {
+        margin-bottom: 20px;
+      }
+      .header-info div {
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body style="background-image: url(image/c.jpg); background-size: 100%">
+    <div class="row">
+      <div class="col-2" style="background-color: blue; color: white">
+        <h3 class="text-center my-4">
+          <i class="fa-solid fa-user-circle"></i> Dashboard
+        </h3>
+        <br />
+        <ul style="list-style: none; padding: 0; margin-left: 15px">
+          <li class="my-2">
+            <a href="home.html" style="color: white; text-decoration: none">
+              <i class="fa-solid fa-house"></i> Beranda
+            </a>
+          </li>
+          <li class="my-2">
+            <a
+              href="mahasiswa.html"
+              style="color: white; text-decoration: none"
+            >
+              <i class="fa-solid fa-user"></i> Mahasiswa
+            </a>
+          </li>
+          <li class="my-2">
+            <a href="dosen.html" style="color: white; text-decoration: none">
+              <i class="fa-solid fa-file-lines"></i> Dosen
+            </a>
+          </li>
+
+          <li class="my-2">
+            <div class="dropdown">
+              <a
+                href="#"
+                class="dropdown-toggle"
+                style="color: white; text-decoration: none"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fa-solid fa-gears"></i> KRS
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="isikrs.html"> Isi KRS </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="lihat.html"> Lihat KRS </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="my-2">
+            <a href="khs.html" style="color: white; text-decoration: none">
+              <i class="fa-solid fa-file-lines"></i> KHS
+            </a>
+          </li>
+          <li class="my-2">
+            <a
+              href="pembayaran.html"
+              style="color: white; text-decoration: none"
+            >
+              <i class="fa-solid fa-money-bill-wave"></i> Pembayaran
+            </a>
+          </li>
+          <li class="my-2">
+            <a href="jadwal.html" style="color: white; text-decoration: none">
+              <i class="fa-solid fa-calendar-days"></i> Jadwal Perkuliahan
+            </a>
+          </li>
+          <li class="my-2">
+            <a href="login.html" style="color: white; text-decoration: none">
+              <i class="fa-solid fa-right-from-bracket"></i> Keluar
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <script
+        src="https://kit.fontawesome.com/YOUR-KIT-ID.js"
+        crossorigin="anonymous"
+      ></script>
+      <div class="col-10">
+        <div class="col-s" style="background-color: white">
+          <div id="krs-content" class="container">
+            <h3 style="background-color: rgba(0, 0, 255, 0.094)" align="center">
+              KARTU RENCANA STUDI (KRS)
+            </h3>
+            <div class="header-info">
+              <div class="row">
+                <div class="col-2"><strong>Nama</strong></div>
+                <div class="col-5">: Putri Natasya Aulia</div>
+              </div>
+              <div class="row">
+                <div class="col-2"><strong>NIM</strong></div>
+                <div class="col-5">: 23TI014</div>
+              </div>
+              <div class="row">
+                <div class="col-2"><strong>Jurusan</strong></div>
+                <div class="col-5">: S1-Teknik Informatika</div>
+              </div>
+              <div class="row">
+                <div class="col-2"><strong>Semester</strong></div>
+                <div class="col-5">: 3 (Tiga)</div>
+              </div>
+              <div class="row">
+                <div class="col-2"><strong>Kelas</strong></div>
+                <div class="col-5">: 23 TI A</div>
+              </div>
+              <div class="row">
+                <div class="col-2"><strong>Dosen Wali</strong></div>
+                <div class="col-5">: Dr. Muhammad Multazam, S.Kom., M.Kom</div>
+              </div>
+            </div>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Kode</th>
+                  <th>Mata Kuliah</th>
+                  <th>SKS</th>
+                  <th>SMT</th>
+                  <th>Paraf</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>066301</td>
+                  <td>Pendidikan Agama</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>066302</td>
+                  <td>Technopreneurship I</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>066303</td>
+                  <td>Arsitektur dan Organisasi Komputer</td>
+                  <td>3</td>
+                  <td>3</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>066304</td>
+                  <td>Struktur Data</td>
+                  <td>3</td>
+                  <td>3</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>066305</td>
+                  <td>Matematika Diskrit</td>
+                  <td>3</td>
+                  <td>3</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>066306</td>
+                  <td>Interaksi Manusia dan Komputer</td>
+                  <td>4</td>
+                  <td>3</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>066307</td>
+                  <td>Sistem Operasi</td>
+                  <td>3</td>
+                  <td>3</td>
+                  <td></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="3" style="text-align: right">
+                    <strong>Total SKS</strong>
+                  </td>
+                  <td colspan="3">20</td>
+                </tr>
+              </tfoot>
+            </table>
+            <div class="row">
+              <div class="col-4"></div>
+              <div class="col-4"></div>
+              <div class="col-4">
+                <p>
+                  Mataram, 26 Januari 2025 <br />Mahasiswa Yang Bersangkutan,
+                </p>
+                <br />
+                <h6><b>(Putri Natasya Aulia)</b></h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/2.2.1/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/2.2.1/js/dataTables.bootstrap5.js"></script>
+  </body>
+</html>

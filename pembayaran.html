@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabel Dosen</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/2.2.1/css/dataTables.bootstrap5.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+    <link href="fontawesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="fontawesome/css/brands.css" rel="stylesheet" />
+    <link href="fontawesome/css/solid.css" rel="stylesheet" />
+     <style>
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f4f4f4;
+            text-align: left;
+        }
+        .header {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #d9534f;
+        }
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+        .biodata-section {
+            background-color: #f0f8ff;
+        }
+    </style>
+  </head>
+  <body style="background-image: url(image/c.jpg); background-size: 100%">
+    <div class="row">
+       <div class="col-2" style="background-color: blue; color: white">
+        <h3 class="text-center my-4">
+          <i class="fa-solid fa-user-circle"></i> Dashboard
+        </h3>
+        <br />
+        <ul style="list-style: none; padding: 0; margin-left: 15px">
+          <li class="my-2">
+            <a href="home.html" style="color: white; text-decoration: none">
+              <i class="fa-solid fa-house"></i> Beranda
+            </a>
+          </li>
+          <li class="my-2">
+            <a
+              href="mahasiswa.html"
+              style="color: white; text-decoration: none"
+            >
+              <i class="fa-solid fa-user"></i> Mahasiswa
+            </a>
+          </li>
+          <li class="my-2">
+            <a href="dosen.html" style="color: white; text-decoration: none">
+              <i class="fa-solid fa-file-lines"></i> Dosen
+            </a>
+          </li>
+
+          <li class="my-2">
+            <div class="dropdown">
+              <a
+                href="#"
+                class="dropdown-toggle"
+                style="color: white; text-decoration: none"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fa-solid fa-gears"></i> KRS
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="isikrs.html"> Isi KRS </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="lihat.html"> Lihat KRS </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="my-2">
+            <a href="khs.html" style="color: white; text-decoration: none">
+              <i class="fa-solid fa-file-lines"></i> KHS
+            </a>
+          </li>
+          <li class="my-2">
+            <a
+              href="pembayaran.html"
+              style="color: white; text-decoration: none"
+            >
+              <i class="fa-solid fa-money-bill-wave"></i> Pembayaran
+            </a>
+          </li>
+          <li class="my-2">
+            <a href="jadwal.html" style="color: white; text-decoration: none">
+              <i class="fa-solid fa-calendar-days"></i> Jadwal Perkuliahan
+            </a>
+          </li>
+          <li class="my-2">
+            <a href="login.html" style="color: white; text-decoration: none">
+              <i class="fa-solid fa-right-from-bracket"></i> Keluar
+            </a>
+          </li>
+        </ul>
+      </div>
+
+
+<!-- Tambahkan link Font Awesome jika belum tersedia -->
+<script src="https://kit.fontawesome.com/YOUR-KIT-ID.js" crossorigin="anonymous"></script>
+
+      <div
+        class="col-10"
+        style="
+          background-color: white;
+          border: 1px solid rgb(81, 81, 136);
+          padding: 10px;
+          border-radius: 10px;  
+        "
+      >
+        
+        
+         <h1 align="center">Pembayaran</h1>
+          <table>
+        <tr class="biodata-section">
+            <th colspan="2">BIODATA</th>
+        </tr>
+        <tr>
+            <td>NIM</td>
+            <td>23TI023</td>
+        </tr>
+        <tr>
+            <td>Nama Mahasiswa</td>
+            <td>Putri Natasya Aulia</td>
+        </tr>
+        <tr>
+            <td>Jurusan</td>
+            <td>Teknik Informatika</td>
+        </tr>
+        <tr>
+            <td>Tempat / Tanggal Lahir</td>
+            <td>Medan, 2004-05-15</td>
+        </tr>
+        <tr>
+            <td>Semester</td>
+            <td>3 (Tiga)</td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th colspan="2">Biaya SPP</th>
+        </tr>
+        <tr>
+            <td>Biaya SPP</td>
+            <td>Rp. 4,740,000,- per Semester</td>
+        </tr>
+        <tr>
+            <td>Biaya SPP Per Angsuran</td>
+            <td>Rp. 790,000,- per Angsuran (6X)</td>
+        </tr>
+        <tr>
+            <td>Tunggakan SPP s/d Tanggal 29 Januari 2025</td>
+            <td class="highlight">Rp. 2,370,000,- (Angsuran Ke 4 - 6 Semester 3)</td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th colspan="2">Biaya SPMA</th>
+        </tr>
+        <tr>
+            <td>Biaya SPMA</td>
+            <td>Rp. 4,800,000,- per Tahun</td>
+        </tr>
+        <tr>
+            <td>Discount SPMA</td>
+            <td>Rp. 0,- per Angsuran (30X)</td>
+        </tr>
+        <tr>
+            <td>Biaya SPMA Per Angsuran</td>
+            <td>Rp. 160,000,- per Angsuran (30X)</td>
+        </tr>
+        <tr>
+            <td>Tunggakan SPMA s/d Tanggal 29 Januari 2025</td>
+            <td class="highlight">Rp. 480,000,- (Angsuran Ke 10 - 12)</td>
+        </tr>
+    </table>
+        </div>
+        </div>
+      </div>
+      <script src="js/bootstrap.bundle.js"></script>
+      <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+      <script src="https://cdn.datatables.net/2.2.1/js/dataTables.js"></script>
+      <script src=isikrs.html"https://cdn.datatables.net/2.2.1/js/dataTables.bootstrap5.js"></script>
+    </div>
+  </body>
+</html>

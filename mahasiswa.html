@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabel Mahasiswa</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/2.2.1/css/dataTables.bootstrap5.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+    <link href="fontawesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="fontawesome/css/brands.css" rel="stylesheet" />
+    <link href="fontawesome/css/solid.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-2" style="background-color: blue; color: white">
+        <h3 class="text-center my-4">
+          <i class="fa-solid fa-user-circle"></i> Dashboard
+        </h3>
+        <br />
+        <ul style="list-style: none; padding: 0; margin-left: 15px">
+          <li class="my-2">
+            <a href="home.html" style="color: white; text-decoration: none">
+              <i class="fa-solid fa-house"></i> Beranda
+            </a>
+          </li>
+          <li class="my-2">
+            <a
+              href="mahasiswa.html"
+              style="color: white; text-decoration: none"
+            >
+              <i class="fa-solid fa-user"></i> Mahasiswa
+            </a>
+          </li>
+          <li class="my-2">
+            <a href="dosen.html" style="color: white; text-decoration: none">
+              <i class="fa-solid fa-file-lines"></i> Dosen
+            </a>
+          </li>
+
+          <li class="my-2">
+            <div class="dropdown">
+              <a
+                href="#"
+                class="dropdown-toggle"
+                style="color: white; text-decoration: none"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fa-solid fa-gears"></i> KRS
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="isikrs.html"> Isi KRS </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="lihat.html"> Lihat KRS </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="my-2">
+            <a href="khs.html" style="color: white; text-decoration: none">
+              <i class="fa-solid fa-file-lines"></i> KHS
+            </a>
+          </li>
+          <li class="my-2">
+            <a
+              href="pembayaran.html"
+              style="color: white; text-decoration: none"
+            >
+              <i class="fa-solid fa-money-bill-wave"></i> Pembayaran
+            </a>
+          </li>
+          <li class="my-2">
+            <a href="jadwal.html" style="color: white; text-decoration: none">
+              <i class="fa-solid fa-calendar-days"></i> Jadwal Perkuliahan
+            </a>
+          </li>
+          <li class="my-2">
+            <a href="login.html" style="color: white; text-decoration: none">
+              <i class="fa-solid fa-right-from-bracket"></i> Keluar
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Tambahkan link Font Awesome jika belum tersedia -->
+      <script
+        src="https://kit.fontawesome.com/YOUR-KIT-ID.js"
+        crossorigin="anonymous"
+      ></script>
+
+      <div
+        class="col-10 p-4"
+        style="
+          background-color: white;
+          border: 1px solid rgb(81, 81, 136);
+          padding: 10px;
+          border-radius: 10px;
+        "
+      >
+        <h5 align="center" style="background-color: rgba(0, 0, 255, 0.758)">
+          Data Mahasiswa
+        </h5>
+        <br />
+        <table id="example" class="table table-striped" style="width: 100%">
+          <thead>
+            <tr>
+              <th>Nam</th>
+              <th>NIM</th>
+              <th>Semester</th>
+              <th>Jurusan</th>
+              <th>Angkatan</th>
+              <th>Alamat</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ayu Lestari</td>
+              <td>23TI044</td>
+              <td>Semester 3</td>
+              <td>Teknik Informatika</td>
+              <td>2022</td>
+              <td>Narmada</td>
+              <td>
+                <button class="btn btn-sm" onclick="editData(this)">
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+                <button class="btn btn-sm" onclick="deleteRow(this)">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Putri Amalia</td>
+              <td>23SI001</td>
+              <td>Semester 2</td>
+              <td>Sistem Informasi</td>
+              <td>2023</td>
+              <td>Mataram</td>
+              <td>
+                <button class="btn btn-sm" onclick="editData(this)">
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+                <button class="btn btn-sm" onclick="deleteRow(this)">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Adi Nugraha</td>
+              <td>22TI012</td>
+              <td>Semester 4</td>
+              <td>Teknik Informatika</td>
+              <td>2021</td>
+              <td>Lombok Timur</td>
+              <td>
+                <button class="btn btn-sm" onclick="editData(this)">
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+                <button class="btn btn-sm" onclick="deleteRow(this)">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Siti Nurhaliza</td>
+              <td>23SI045</td>
+              <td>Semester 1</td>
+              <td>Sistem Informasi</td>
+              <td>2023</td>
+              <td>Lombok Barat</td>
+              <td>
+                <button class="btn btn-sm" onclick="editData(this)">
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+                <button class="btn btn-sm" onclick="deleteRow(this)">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Rizky Pratama</td>
+              <td>22TI056</td>
+              <td>Semester 5</td>
+              <td>Teknik Informatika</td>
+              <td>2020</td>
+              <td>Lombok Tengah</td>
+              <td>
+                <button class="btn btn-sm" onclick="editData(this)">
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+                <button class="btn btn-sm" onclick="deleteRow(this)">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Rahmat Hidayat</td>
+              <td>21TI078</td>
+              <td>Semester 6</td>
+              <td>Teknik Informatika</td>
+              <td>2019</td>
+              <td>Sekotong</td>
+              <td>
+                <button class="btn btn-sm" onclick="editData(this)">
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+                <button class="btn btn-sm" onclick="deleteRow(this)">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Nia Safitri</td>
+              <td>23SI034</td>
+              <td>Semester 2</td>
+              <td>Sistem Informasi</td>
+              <td>2023</td>
+              <td>Kuta</td>
+              <td>
+                <button class="btn btn-sm" onclick="editData(this)">
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+                <button class="btn btn-sm" onclick="deleteRow(this)">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Bayu Wirawan</td>
+              <td>22TI003</td>
+              <td>Semester 4</td>
+              <td>Teknik Informatika</td>
+              <td>2021</td>
+              <td>Lingsar</td>
+              <td>
+                <button class="btn btn-sm" onclick="editData(this)">
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+                <button class="btn btn-sm" onclick="deleteRow(this)">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Wulan Sari</td>
+              <td>23SI056</td>
+              <td>Semester 1</td>
+              <td>Sistem Informasi</td>
+              <td>2023</td>
+              <td>Lombok Utara</td>
+              <td>
+                <button class="btn btn-sm" onclick="editData(this)">
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+                <button class="btn btn-sm" onclick="deleteRow(this)">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Farhan Hakim</td>
+              <td>21TI012</td>
+              <td>Semester 7</td>
+              <td>Teknik Informatika</td>
+              <td>2018</td>
+              <td>Lombok Timur</td>
+              <td>
+                <button class="btn btn-sm" onclick="editData(this)">
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+                <button class="btn btn-sm" onclick="deleteRow(this)">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+            <!-- Repeat similar rows -->
+          </tbody>
+        </table>
+        <button class="btn btn-primary" id="addDataBtn" type="button">
+          Tambah Mahasiswa
+        </button>
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/2.2.1/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/2.2.1/js/dataTables.bootstrap5.js"></script>
+    <script>
+      const table = new DataTable("#example");
+
+      document.getElementById("addDataBtn").addEventListener("click", () => {
+        const newData = prompt(
+          "Masukkan data dalam format: Nama,NIM,Semester,Jurusan,Angkatan,Alamat"
+        );
+        if (newData) {
+          const dataArray = newData.split(",");
+          if (dataArray.length === 6) {
+            table.row
+              .add([
+                dataArray[0],
+                dataArray[1],
+                dataArray[2],
+                dataArray[3],
+                dataArray[4],
+                dataArray[5],
+                `<button class="btn btn-sm" onclick="editData(this)"><i class="fa-solid fa-pencil"></i></button>
+                   <button class="btn btn-sm" onclick="deleteRow(this)"><i class="fa-solid fa-trash"></i></button>`,
+              ])
+              .draw();
+          } else {
+            alert(
+              "Format data salah. Pastikan menggunakan 6 elemen yang dipisahkan koma."
+            );
+          }
+        }
+      });
+
+      function deleteRow(button) {
+        const row = button.parentElement.parentElement;
+        row.remove();
+      }
+      function editData(button) {
+        const row = button.parentElement.parentElement;
+        const cells = row.querySelectorAll("td");
+        const data = Array.from(cells).map((cell) => cell.textContent);
+
+        const updatedData = prompt(
+          "Edit data dalam format: Nama,NIM,Semester,Jurusan,Angkatan,Alamat",
+          data.slice(0, 6).join(",")
+        );
+
+        if (updatedData) {
+          const newDataArray = updatedData.split(",");
+          if (newDataArray.length === 6) {
+            newDataArray.forEach((value, index) => {
+              cells[index].textContent = value;
+            });
+          } else {
+            alert(
+              "Format data salah. Harap masukkan 6 elemen yang dipisahkan koma."
+            );
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

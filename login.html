@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link href="fontawesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="fontawesome/css/brands.css" rel="stylesheet" />
+    <link href="fontawesome/css/solid.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <script>
+      function validateForm(event) {
+        event.preventDefault(); // Mencegah form untuk langsung submit
+
+        const nameInput = document.getElementById("inputname");
+        const passwordInput = document.getElementById("inputPassword6");
+
+        if (!nameInput.value.trim()) {
+          alert("Nama harus diisi!");
+          nameInput.focus();
+          return;
+        }
+
+        if (!passwordInput.value.trim()) {
+          alert("Password harus diisi!");
+          passwordInput.focus();
+          return;
+        }
+
+        alert("Login berhasil!");
+        window.location.href = "home.html"; // Redirect ke halaman lain
+      }
+    </script>
+  </head>
+  <body style="background-color: rgba(41, 41, 117, 0.452)">
+    <div class="row" style="margin-top: 70px">
+      <div class="col-4"></div>
+      <div class="col-4">
+        <form
+          style="
+            border: 3px solid rgb(0, 0, 0);
+            padding: 70px;
+            background-color: rgb(237, 237, 251);
+          "
+          onsubmit="validateForm(event)"
+        >
+          <img
+            src="image/utm.png"
+            style="
+              width: 70px;
+              margin-left: 90px;
+              margin-top: -50px;
+              border-radius: 50px;
+            "
+          />
+          <br />
+          <br />
+          <div class="row g-3 align-items-center">
+            <div class="col-auto">
+              <label for="inputname" class="col-form-label"
+                ><i class="fa-solid fa-user"></i> <b>Nama</b></label
+              >
+            </div>
+            <div class="col-auto">
+              <input
+                type="text"
+                id="inputname"
+                class="form-control"
+                aria-describedby="nameHelpInline"
+              />
+            </div>
+          </div>
+
+          <div class="row g-3 align-items-center">
+            <div class="col-auto">
+              <label for="inputPassword6" class="col-form-label"
+                ><i class="fa-solid fa-key"></i> <b>Password</b></label
+              >
+            </div>
+            <div class="col-auto">
+              <input
+                type="password"
+                id="inputPassword6"
+                class="form-control"
+                aria-describedby="passwordHelpInline"
+              />
+            </div>
+          </div>
+          <br />
+          <br />
+          <div align="center">
+            <button type="submit" class="btn btn-light">
+              <i class="fa-solid fa-star"></i> Submit
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="col-4"></div>
+    </div>
+    <script src="js/bootstrap.bundle.js"></script>
+  </body>
+</html>
